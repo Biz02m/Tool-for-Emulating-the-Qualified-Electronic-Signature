@@ -13,14 +13,20 @@ if __name__ == "__main__":
     klucz = key_pair.export_key()
     print(klucz.decode())
     print("\nKlucz publiczny:")
-    print(key_pair.publickey().export_key().decode())
+    publicKey = key_pair.publickey().export_key()
+    with open("publicKey.txt", "w") as writer:
+        writer.write(publicKey.decode())
+    print(publicKey.decode())
 
     pin_key = pin.encode() * 16  # Pad PIN to 16 bytes (AES block size)
     aes_cipher = AES.new(pin_key[:16], AES.MODE_EAX)
     encrypted_private_key = aes_cipher.encrypt(klucz)
     print(encrypted_private_key)
+    with open("privateKey.txt", "wb") as writer:
+        writer.write(encrypted_private_key)
     aes_nonce = aes_cipher.nonce
 
-    aes_cipher = AES.new(pin_key[:16], AES.MODE_EAX, nonce = aes_nonce)
-    decrypted_private_key = aes_cipher.decrypt(encrypted_private_key)
-    print(decrypted_private_key.decode())
+    #required in another app
+    #aes_cipher = AES.new(pin_key[:16], AES.MODE_EAX, nonce = aes_nonce)
+    #decrypted_private_key = aes_cipher.decrypt(encrypted_private_key)
+    #print(decrypted_private_key.decode())
