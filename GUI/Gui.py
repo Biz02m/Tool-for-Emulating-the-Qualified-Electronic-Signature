@@ -144,4 +144,5 @@ class Gui:
 
     @staticmethod
     def exit_from_program():
-        sys.exit("Program ended successfully! \nBye :)")
+        print("Program ended successfully! \nBye :)")
+        sys.exit(0)
