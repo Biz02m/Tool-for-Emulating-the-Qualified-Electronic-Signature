@@ -124,7 +124,7 @@ class Gui:
         self.private_key_text.delete("1.0", "end")
         self.private_key_text.insert(tk.INSERT, private_key.decode())
         with open("private_key.txt", "wb") as writer:
-            writer.write(private_key.decode())
+            writer.write(private_key)
 
         public_key = key_pair.publickey().export_key()
         self.public_key_text.delete("1.0", "end")
