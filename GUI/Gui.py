@@ -138,9 +138,8 @@ class Gui:
         self.encrypted_private_key_text.delete("1.0", "end")
         self.encrypted_private_key_text.insert(tk.INSERT, encrypted_private_key)
         with open("encrypted_private_key.txt", "wb") as writer:
+            writer.write(aes_cipher.nonce)
             writer.write(encrypted_private_key)
-
-        aes_nonce = aes_cipher.nonce
 
     @staticmethod
     def exit_from_program():
