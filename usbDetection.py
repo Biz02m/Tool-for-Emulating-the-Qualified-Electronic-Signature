@@ -31,32 +31,15 @@ def get_key_nonce(drive, filename="privateKey.txt"):
         print(f"Error: {drive}: {e}")
     return []
 
-
-# enables to check whether the file is
-# in any of the folders on the drive
-# def find_private_key_file(drive, filename="privateKey.txt"):
-#     print(f"Searching for {filename} on {drive}:")
-#     try:
-#         for root, dirs, files in os.walk(drive):
-#             if filename in files:
-#                 print(f"File {filename} found at: {os.path.join(root, filename)}")
-#                 return True
-#         print(f"File {filename} is not on the drive")
-#     except Exception as e:
-#         print(f"Could not search files on {drive}: {e}")
-#     return False
-
-
 #This function is merely for testing purpouses
 #Deciphering will occur in another script
-def decipher(private_key, aes_nonce):
-    pin = "1234"
+def decipher(private_key, aes_nonce, pin):
     pin_key = pin.encode() * 16  # Pad PIN is 16 bytes (AES block size)
     aes_cipher = AES.new(pin_key[:16], AES.MODE_EAX, nonce=aes_nonce)
     decrypted_private_key = aes_cipher.decrypt(private_key)
-    print(decrypted_private_key.decode())
+    return decrypted_private_key.decode()
 
 
 drive = detect_new_drive()
 key, aes_nonce = get_key_nonce(drive)
-decipher(key, aes_nonce)
+deciphered_key = decipher(key, aes_nonce, "1234")
