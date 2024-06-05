@@ -6,8 +6,7 @@ from Crypto.PublicKey import RSA
 import os
 import time
 
-
-def verify_signature(signature_xml_path, public_key_path):
+def verify_signature(original_file_path, public_key_path, signature_xml_path):
     # Wczytanie pliku XML
     with open(signature_xml_path, "rb") as f:
         xml_data = f.read()
@@ -19,13 +18,11 @@ def verify_signature(signature_xml_path, public_key_path):
     signature_value = root.find(".//{http://www.w3.org/2000/09/xmldsig#}SignatureValue").text.strip()
     signature = base64.b64decode(signature_value.encode('utf-8'))
 
-    # Sprawdzenie czy istnieje element EncryptedHash
+    # Wczytanie zaszyfrowanego hasha dokumentu
     encrypted_hash_elem = root.find(".//{http://www.w3.org/2000/09/xmldsig#}EncryptedHash")
     if encrypted_hash_elem is None:
         raise ValueError("Nie znaleziono elementu EncryptedHash")
-
-    # Wczytanie zaszyfrowanego hasha dokumentu
-    encrypted_hash = root.find(".//{http://www.w3.org/2000/09/xmldsig#}EncryptedHash").text.strip()
+    encrypted_hash = encrypted_hash_elem.text.strip()
     encrypted_hash_bytes = base64.b64decode(encrypted_hash.encode('utf-8'))
 
     # Wczytanie informacji o dokumencie
@@ -38,9 +35,15 @@ def verify_signature(signature_xml_path, public_key_path):
     # Wczytanie znacznika czasu
     timestamp = root.find(".//{http://www.w3.org/2000/09/xmldsig#}Timestamp").text.strip()
 
-    # Hashowanie danych
-    h = SHA256.new()
-    h.update(encrypted_hash_bytes)
+    # Hashowanie oryginalnego dokumentu
+    with open(original_file_path, "rb") as f:
+        original_data = f.read()
+    h = SHA256.new(original_data)
+
+    # Weryfikacja hash dokumentu z DigestValue
+    digest_value = root.find(".//{http://www.w3.org/2000/09/xmldsig#}DigestValue").text.strip()
+    if base64.b64encode(h.digest()).decode('utf-8') != digest_value:
+        raise ValueError("Hash dokumentu nie zgadza się z DigestValue")
 
     # Wczytanie klucza publicznego
     with open(public_key_path, "rb") as f:
@@ -129,5 +132,5 @@ user_info = {
     "name": "Joe Mama",
     "email": "joemama@gmail.pg.edu.com.pl"
 }
-#sign_file("example.pdf", "private_key.txt", user_info, "signature.xml")
-verify_signature("signature.xml", "public_key.txt")
+#sign_file("example.docx", "private_key.txt", user_info, "signature2.xml")
+#verify_signature("signature2.xml", "public_key1.txt", "example.docx")
