@@ -1,34 +1,34 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
   <DocumentInfo>
-    <Size>66021</Size>
-    <Extension>.pdf</Extension>
-    <ModificationDate>Tue Apr 23 12:54:00 2024</ModificationDate>
+    <Size>16414</Size>
+    <Extension>.png</Extension>
+    <ModificationDate>Wed May 15 11:52:11 2024</ModificationDate>
   </DocumentInfo>
   <UserInfo>
-    <Name>Mikołaj Bisewski</Name>
-    <Email>mikolajbisewski@wp.pl</Email>
+    <Name>Joe Mama</Name>
+    <Email>joemama@gmail.pg.edu.com.pl</Email>
   </UserInfo>
   <SignedInfo>
     <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
     <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
-    <Reference URI="example.pdf">
+    <Reference URI="C:/Users/Flamaster333/Desktop/Screenshot_1.png">
       <Transforms>
         <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
       </Transforms>
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-      <DigestValue>1bSfdp/qSfntOX4QeL3OrZe7uoimwnskZ5RuuKiPIBY=</DigestValue>
+      <DigestValue>G8CcsSN8j67grSEmjRm9X/mGKzW2wx0/94JMHtjGI4g=</DigestValue>
     </Reference>
   </SignedInfo>
-  <SignatureValue>j+JDLevvJLo3M5KUOeVO3oy2d/EzVSOzvwzD3OZC1SWYE5+2+5L80ibVqycUbRlChYvHSmTolcrKeghHe76kWns6pFtBb1IqyfJeCQtmaQf0OXe1g3AlAJd2UNJ/vcp1DMniOF85vpHZEpjOgjj9EBkXBqfUJNCrwWb1bHM/WaDNPmvGq3Ij5gVNSMLL6n1oGS7bB8DDyzy96Tpca8Sf3/n3sjfBKakIlv/6POqxSBsa4tVzU21qRcKhfBr3XitYcOrwyCPt7n+MKu/ESY5/o5OYosI5X1m3x3fFSAoMvjEXtgV7dnr9GA/EF7GoHuAlv70tKlFV734WHkyVAwfXOyub7v8zvmLxb++BOBTXk6p/qrlNgeJoN1K4nIwpil8XYEhGOYYJ/yMYEJqOrrVYnshV0hUdw1axCfdMBmj8md7xhgyM+33E+5AdGPYuK+MyKbo4jGC8wGqs2g9MsQKH2JpKbw5FBLkZULq2gMzmagUEM/ix95MsiuSmTRl1Pg4YkGKHYXmq9xe3LawFfFCPXr+Ewme6Eh7UbsEXMfZICmDjUqs+IV9S2b3DHrMC+X/3kIktpEg8nXRu0y3ALEUrrlHFrz5RfGOM3ShcG92iIFbjKhkPNwdqFIn4DLGw2H5n0uAPXO5+eGyFRaEc+yxp+EMPF6BpEObb4XH1yEenVUM=</SignatureValue>
+  <SignatureValue>33pEjj/jGpukvoMMO7EKsMmPOYX3yeJd83ILyDF9lSZdab0EJenxqPrg1iqv99ykKaM+UmZdsSFORwjtAbUHfxbdFuCpodMzdKeSGBQv6UrrlheV7x4z5QqIRBvLqkwGw1xkdiRcOMaDEDsvYyfSmQFQk0vH77ZpmsjwO3GWhfLHZKmArukG6Vec3XVlDm+5oM7YoG0z5QBsMBeUdnycjyrUUlsvGG95qGuIEcbn8c8qiTiVuMXbxhW3BY0PSflNM6vlZ82QQ0VmHlJ+M+raUXRk5cvl9Ty1V3b66ifUxjm1eMqt63fTC8u2GLkwHZlOvygzkowqVBsiYdMcGmCgm19c9SxTqjdPaRZB94GRncj00tATUY12P8iYYbKme8qYkQSsoNNu/MuXb6/vFZIkIBtaP7w1yOkFHBnmcYlf3chXNogHSuWOO8pacWGRJW40Oydi/MnWIlv36weSD8L1qnaTmm6W6+jW7LlCv2MW4nEyW7b0s8dIFSXDPissNkapKOG6mcljRiTDtHwhuT+2mLZe8+5bAwQ9K4MMnhfTFWCMqXldcc2ICnMy9TnMi4Jj1Wle7kKmPnhpk5cCLja+5JL+TFaWQtb2HmLDTD5rCc0Rv0XkxdAWdcc/TDOAaun77YchslAClaX3Gp5REtSRGqQ4P07n82X7Mf7F7rGSAQc=</SignatureValue>
   <KeyInfo>
     <KeyValue>
       <RSAKeyValue>
-        <Modulus>uajbch8D/f09+H7zEr4vKJAmcjtKxiL7aAwHIej+BdJgWV5dETFrUsmR1QlZgHERqJ7rVKZtcLKCWaO2T8hdckYCQmNPTtrkIew1hfXv8MOoBOUft01baXvPdu5kZIZplhANiPa+Ambdmi/C8quYpCazx2RbWugqE5jchBXeBHqkmHQS2vj4d5xj6e7KHbUL82LFAKsneWTptAoYYPPL8S5OGi42rFjASC96B07Gg2fGqprLIPzjR2OV36/L+5lcfVI4l4JE2y3GV6JrsLc/VFP038CLdNCnh5Sm6DsFPDzV9BqLZittO4ynIL7y+hL040hEx2N+OZZhd49/PH58HolGuqyEmUN0GlU3s/gbtEyXiSljeEjtgVcmvv0eID9cco3MrPT7+7jtAeKEuUPlo8OeHpr533t7V52b6H7nxrkYH3ULowV9PFE13vAT7SV835B6+p4MQ6kkITD3CjdCndfb564NVf/Vb7M5Np05DCU54y2ITRtQDdLzajAMCYf4XpKcNrUeVvcrx02D4Nc7Bbf59IomJZPQ62Q0p1PkQsYo7dfi1hTmPhbqtC6vPv5ZegDy3+ss/Iyek90QSaQJdhs3Xxptv4jNqnnKlTGRYDN4J29HrvX4OmmMuAhlNuI8Fsmm4BIW7/fEArufJf9c41wmB11z0ZrBZ4xEKiyuhAU=</Modulus>
+        <Modulus>6HXOXyd6iebxu91hqUYMrgDZ2l16B3zEhmAm/5DVBCl0nbZUYvgDaKpkEGtb2FGiOu6naQ3FPZOQbQa+vM2pMFPzV1Nb+MLDUlz3VBWqHRAO6ch0ZejEm0PpQraxbhff21ZY+1uwZtXPY018CdrNuxlITCzXSphYbJUawxp0UWN98jtz6batjKk2rF+eII4O75vSxPFxgmTI+ITv5O+hznUogp0UtZotd8wEI9VnUfyMIYMIoBgSfvJI2r6YOwRFp1KvmdmwLEcmGtgwTr4rSmm+tiIpCvXtT86brV2zTwQlx7qolKIaaiJxJywQ0h8pGrwa7PXQV1OWKwTcklDfhRMHoRTaAeUeKut6kLOXiAcZxbBIIgbRwr6eqyIcyIwMekgx20PLK1THh2JDw+6m6DykrQc0t87OYvj+/4uma6WbcHej7Yl0XreId7T+xy2BZOrM01we51jsp5UYAMoGO7T6FGGwyL9uvm2EhVJhuJ4H5NUUs2cosOi21eNZ47uy8lx2cRKclxHDIrN0AFRPsH32SlRIKOK01H9xjeoLrd+k8Jf2xKm8+cYCgDAbfbuEuwG2rm8lmXr6RpJ9ed+Lae+rZQQCSvMleUtsSrHJ0mWxTr6jBlTquhEhCYryEr/uqZAKbKzj7NrvWakvEaNxz909Mkwz+uw2JEsrd68X8O8=</Modulus>
         <Exponent>AQAB</Exponent>
       </RSAKeyValue>
     </KeyValue>
   </KeyInfo>
-  <EncryptedHash>1bSfdp/qSfntOX4QeL3OrZe7uoimwnskZ5RuuKiPIBY=</EncryptedHash>
-  <Timestamp>2024-05-30T12:28:01</Timestamp>
+  <EncryptedHash>G8CcsSN8j67grSEmjRm9X/mGKzW2wx0/94JMHtjGI4g=</EncryptedHash>
+  <Timestamp>2024-06-11T12:20:09</Timestamp>
 </Signature>

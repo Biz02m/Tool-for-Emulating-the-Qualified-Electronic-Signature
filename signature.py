@@ -43,7 +43,8 @@ def verify_signature(original_file_path, public_key_path, signature_xml_path):
     # Weryfikacja hash dokumentu z DigestValue
     digest_value = root.find(".//{http://www.w3.org/2000/09/xmldsig#}DigestValue").text.strip()
     if base64.b64encode(h.digest()).decode('utf-8') != digest_value:
-        raise ValueError("Hash dokumentu nie zgadza się z DigestValue")
+        #raise ValueError("Hash dokumentu nie zgadza się z DigestValue")
+        return False
 
     # Wczytanie klucza publicznego
     with open(public_key_path, "rb") as f:
@@ -57,8 +58,10 @@ def verify_signature(original_file_path, public_key_path, signature_xml_path):
         print("Rozszerzenie:", doc_info["Extension"])
         print("Data modyfikacji:", doc_info["ModificationDate"])
         print("Znacznik czasu podpisu:", timestamp)
+        return True
     except (ValueError, TypeError):
         print("Podpis cyfrowy jest niepoprawny.")
+        return False
 
 def sign_file(file_path, private_key_path, user_info, output_xml_path):
 
@@ -67,6 +70,7 @@ def sign_file(file_path, private_key_path, user_info, output_xml_path):
 
     with open(private_key_path, "rb") as f:
         private_key = RSA.import_key(f.read())
+
 
     # Hashing data
     h = SHA256.new(data)
@@ -133,4 +137,4 @@ user_info = {
     "email": "joemama@gmail.pg.edu.com.pl"
 }
 #sign_file("example.docx", "private_key.txt", user_info, "signature2.xml")
-#verify_signature("signature2.xml", "public_key1.txt", "example.docx")
+#verify_signature("C:/Users/Flamaster333/Desktop/Screenshot_1.png", "public_key.txt", "signature.xml")

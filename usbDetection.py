@@ -37,9 +37,9 @@ def decipher(private_key, aes_nonce, pin):
     pin_key = pin.encode() * 16  # Pad PIN is 16 bytes (AES block size)
     aes_cipher = AES.new(pin_key[:16], AES.MODE_EAX, nonce=aes_nonce)
     decrypted_private_key = aes_cipher.decrypt(private_key)
-    return decrypted_private_key.decode()
+    return decrypted_private_key
 
 
-drive = detect_new_drive()
-key, aes_nonce = get_key_nonce(drive)
-deciphered_key = decipher(key, aes_nonce, "1234")
+# drive = detect_new_drive()
+# key, aes_nonce = get_key_nonce(drive)
+# deciphered_key = decipher(key, aes_nonce, "1234")
